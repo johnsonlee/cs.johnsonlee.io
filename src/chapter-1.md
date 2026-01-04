@@ -10,7 +10,7 @@
 * 🎨 Color
 * 🖼 Image / Video
 * 🔊 Sound / Audio
-* 💻 Program Instructions / Binary Data / etc.
+* 💻 Program Instructions / Binary Data
 * ...
 
 ---

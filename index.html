@@ -4,50 +4,53 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="author" content="Johnson Lee">
-    <meta name="description" content="Programming for Kids and Beginners">
-    <meta name="keyword" content="Programming,Kids,Beginners,C,C++,Objective-C,Rust,Java,JavaScript,TypeScript,Python,Kotlin,Swift,Golang,AI,OpenAI,ChatGPT,Gemini,Grok,Claude,LLM,Johnson,johnsonlee">
+    <meta name="description" content="Programming for Kids">
+    <meta name="keyword" content="coding,programming,kids-programming,kids-coding,vibe-coding,c,c++,objective-c,rust,java,javascript,typescript,python,kotlin,swift,golang,ai,openai,chatgpt,gemini,grok,claude,llm,johnson,johnsonlee">
     <meta name="subject" content="Programming">
 
     <title>Programming for Kids</title>
 
     <link rel="stylesheet" href="dist/reset.css">
     <link rel="stylesheet" href="dist/reveal.css">
-    <link rel="stylesheet" href="dist/theme/lite.css">
+    <link rel="stylesheet" href="dist/theme/knight.css">
     <link rel="stylesheet" href="plugin/highlight/monokai.css">
     <style>
+      .reveal.overview .stack section {
+        left: 0 !important;
+      }
       .reveal h1,.reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
-        text-transform: none;
+        text-transform: none !important;
       }
       .reveal .slides {
         text-align: inherit !important;
       }
       .reveal .slides section {
-        padding: 40px 60px;
-        box-sizing: border-box;
+        padding: 40px 60px !important;
+        box-sizing: border-box !important;
         display: flex !important;
-        flex-direction: column;
-        height: 100%;
+        flex-direction: column !important;
+        height: 100% !important;
       }
-      .reveal .slides section > h1,
-      .reveal .slides section > h2,
-      .reveal .slides section > h3 {
-        flex: 0 0 auto;
+      .reveal .slides section h1,
+      .reveal .slides section h2,
+      .reveal .slides section h3 {
+        flex: 0 0 auto !important;
       }
 
-      .reveal .slides section > h1 + ol:last-child,
-      .reveal .slides section > h2 + ol:last-child,
-      .reveal .slides section > h3 + ol:last-child,
-      .reveal .slides section > h1 + ul:last-child,
-      .reveal .slides section > h2 + ul:last-child,
-      .reveal .slides section > h3 + ul:last-child,
-      .reveal .slides section > h1 + *:not(p):last-child,
-      .reveal .slides section > h2 + *:not(p):last-child,
-      .reveal .slides section > h3 + *:not(p):last-child {
-        flex: 1 1 auto;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        justify-content: space-evenly;
+      .reveal .slides section h1 + ol:last-child,
+      .reveal .slides section h2 + ol:last-child,
+      .reveal .slides section h3 + ol:last-child,
+      .reveal .slides section h1 + ul:last-child,
+      .reveal .slides section h2 + ul:last-child,
+      .reveal .slides section h3 + ul:last-child,
+      .reveal .slides section h1 + *:not(p):last-child,
+      .reveal .slides section h2 + *:not(p):last-child,
+      .reveal .slides section h3 + *:not(p):last-child {
+        flex: 1 1 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        justify-content: space-evenly !important;
       }
       .reveal .slides section blockquote {
         min-width: 90%;
@@ -79,63 +82,85 @@
       .reveal .slides table {
         margin: auto 0;
       }
-      .reveal pre:has(> .hljs) {
+      .reveal .slides pre:has(> .hljs) {
         box-shadow: none;
       }
-      .reveal .hljs {
+      .reveal .slides .hljs {
         min-height: inherit !important;
       }
-      .reveal .hljs.text {
+      .reveal .slides .hljs.text {
         background: none;
       }
-      .reveal .hljs.text .hljs-ln-numbers {
-	    display: none;
-	  }
+      .reveal .slides .hljs.text .hljs-ln-numbers {
+        display: none;
+      }
+
+      .reveal-print .slides section h1 + ol:last-child,
+      .reveal-print .slides section h1 + ul:last-child,
+      .reveal-print .slides section h1 + *:not(p):last-child {
+        height: calc(100% - var(--r-heading1-size));
+      }
+      .reveal-print .slides section h2 + ol:last-child,
+      .reveal-print .slides section h2 + ul:last-child,
+      .reveal-print .slides section h2 + *:not(p):last-child {
+        height: calc(100% - var(--r-heading2-size));
+      }
+      .reveal-print .slides section h3 + ul:last-child,
+      .reveal-print .slides section h3 + ol:last-child,
+      .reveal-print .slides section h3 + *:not(p):last-child {
+        height: calc(100% - var(--r-heading3-size));
+      }
+      .reveal-print .slides section table {
+        margin: auto !important;
+      }
     </style>
   </head>
   <body>
     <div class="reveal">
       <div class="slides">
         <section data-charset="utf-8" data-auto-animate data-markdown="src/cover.md" class="center"></section>
-        <section>
-          <section data-charset="utf-8" data-auto-animate data-markdown="src/preface.md" class="center"></section>
-        </section>
+        <section data-charset="utf-8" data-auto-animate data-markdown="src/preface.md" class="center"></section>
         <section data-charset="utf-8" data-auto-animate data-markdown="src/outline.md"></section>
         <section>
           <section data-charset="utf-8" data-auto-animate data-markdown="src/chapter-1.md"></section>
+        </section>
+        <section>
+          <section data-charset="utf-8" data-auto-animate data-markdown="src/chapter-2.md"></section>
         </section>
       </div>
     </div>
 
     <script src="dist/reveal.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
     <script src="plugin/notes/notes.js"></script>
     <script src="plugin/markdown/markdown.js"></script>
     <script src="plugin/math/math.js"></script>
-    <script src="plugin/highlight/highlight.js"></script>
-    <script>
-      function updatePageTitle(slide) {
+    <script src="plugin/search/search.js"></script>
+    <script type="text/javascript">
+      const updateTitle = (slide) => {
         if (!slide) return;
 
         const heading = slide.querySelector('h1, h2, h3, h4, h5, h6');
         if (heading) {
           document.title = heading.textContent.trim();
         }
-      }
+      };
+
       Reveal.initialize({
         hash: true,
         width: 1920,
         height: 1080,
         center: false,
         margin: 0.05,
-        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ]
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3, RevealSearch ]
       });
 
       Reveal.on('ready', event => {
-        updatePageTitle(event.currentSlide);
+        updateTitle(event.currentSlide);
       });
 
       Reveal.on('slidechanged', event => {
-        updatePageTitle(event.currentSlide);
+        updateTitle(event.currentSlide);
       });
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-101EEJ7J03"></script>
