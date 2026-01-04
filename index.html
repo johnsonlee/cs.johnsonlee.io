@@ -113,6 +113,14 @@
     <script src="plugin/math/math.js"></script>
     <script src="plugin/highlight/highlight.js"></script>
     <script>
+      function updatePageTitle(slide) {
+        if (!slide) return;
+
+        const heading = slide.querySelector('h1, h2, h3, h4, h5, h6');
+        if (heading) {
+          document.title = heading.textContent.trim();
+        }
+      }
       Reveal.initialize({
         hash: true,
         width: 1920,
@@ -120,6 +128,14 @@
         center: false,
         margin: 0.05,
         plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ]
+      });
+
+      Reveal.on('ready', event => {
+        updatePageTitle(event.currentSlide);
+      });
+
+      Reveal.on('slidechanged', event => {
+        updatePageTitle(event.currentSlide);
       });
     </script>
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-101EEJ7J03"></script>
