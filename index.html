@@ -1,40 +1,133 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="author" content="Johnson Lee">
+    <meta name="description" content="Programming for Kids and Beginners">
+    <meta name="keyword" content="Programming,Kids,Beginners,C,C++,Objective-C,Rust,Java,JavaScript,TypeScript,Python,Kotlin,Swift,Golang,AI,OpenAI,ChatGPT,Gemini,Grok,Claude,LLM,Johnson,johnsonlee">
+    <meta name="subject" content="Programming">
 
-		<title>reveal.js</title>
+    <title>Programming for Kids</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css">
+    <link rel="stylesheet" href="dist/reveal.css">
+    <link rel="stylesheet" href="dist/theme/lite.css">
+    <link rel="stylesheet" href="plugin/highlight/monokai.css">
+    <style>
+      .reveal h1,.reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal h6 {
+        text-transform: none;
+      }
+      .reveal .slides {
+        text-align: inherit !important;
+      }
+      .reveal .slides section {
+        padding: 40px 60px;
+        box-sizing: border-box;
+        display: flex !important;
+        flex-direction: column;
+        height: 100%;
+      }
+      .reveal .slides section > h1,
+      .reveal .slides section > h2,
+      .reveal .slides section > h3 {
+        flex: 0 0 auto;
+      }
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+      .reveal .slides section > h1 + ol:last-child,
+      .reveal .slides section > h2 + ol:last-child,
+      .reveal .slides section > h3 + ol:last-child,
+      .reveal .slides section > h1 + ul:last-child,
+      .reveal .slides section > h2 + ul:last-child,
+      .reveal .slides section > h3 + ul:last-child,
+      .reveal .slides section > h1 + *:not(p):last-child,
+      .reveal .slides section > h2 + *:not(p):last-child,
+      .reveal .slides section > h3 + *:not(p):last-child {
+        flex: 1 1 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-evenly;
+      }
+      .reveal .slides section blockquote {
+        min-width: 90%;
+        margin: var(--r-block-margin) 0;
+        padding: 0.8em;
+        border-left: 6px solid #e7ad52;
+      }
+      .reveal .slides section.center {
+        align-items: center !important;
+        justify-content: center !important;
+        text-align: center !important;
+      }
+      .reveal .slides section.center blockquote {
+        margin: var(--r-block-margin) auto !important;
+      }
+      .reveal .slides section pre {
+        margin: var(--r-block-margin) 0;
+      }
+      .reveal .slides section pre code {
+        padding: 1em;
+      }
+      .reveal .slides section.center pre {
+        margin: var(--r-block-margin) auto !important;
+      }
+      .reveal .slides code {
+        white-space: pre;
+        margin: 0 auto;
+      }
+      .reveal .slides table {
+        margin: auto 0;
+      }
+      .reveal pre:has(> .hljs) {
+        box-shadow: none;
+      }
+      .reveal .hljs {
+        min-height: inherit !important;
+      }
+      .reveal .hljs.text {
+        background: none;
+      }
+      .reveal .hljs.text .hljs-ln-numbers {
+	    display: none;
+	  }
+    </style>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-charset="utf-8" data-auto-animate data-markdown="src/cover.md" class="center"></section>
+        <section>
+          <section data-charset="utf-8" data-auto-animate data-markdown="src/preface.md" class="center"></section>
+        </section>
+        <section data-charset="utf-8" data-auto-animate data-markdown="src/outline.md"></section>
+        <section>
+          <section data-charset="utf-8" data-auto-animate data-markdown="src/chapter-1.md"></section>
+        </section>
+      </div>
+    </div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
-
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/math/math.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      Reveal.initialize({
+        hash: true,
+        width: 1920,
+        height: 1080,
+        center: false,
+        margin: 0.05,
+        plugins: [ RevealMarkdown, RevealHighlight, RevealNotes, RevealMath.MathJax3 ]
+      });
+    </script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-101EEJ7J03"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-101EEJ7J03');
+    </script>
+  </body>
 </html>
