@@ -1,8 +1,3 @@
-
-## Target Audience
-
----
-
 ## Who is this for?
 
 ` `
