@@ -4,9 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-This is **cs.johnsonlee.io** — a "Programming for Kids" interactive slide presentation using **reveal.js v5.1.0 from CDN** (jsDelivr), deployed to GitHub Pages via the custom domain `cs.johnsonlee.io`.
+This is **cs.johnsonlee.io** — a "Programming for Kids" interactive slide presentation deployed to GitHub Pages via the custom domain `cs.johnsonlee.io`.
 
-Slides are authored as Markdown files in `src/en/` (English) and `src/zh/` (Chinese), rendered by reveal.js in a single-page HTML app (`index.html`).
+Slides are authored as Markdown files in `src/en/` (English) and `src/zh/` (Chinese), rendered by the Slides framework (`slides.johnsonlee.io`) which wraps reveal.js.
 
 ## Development
 
@@ -22,17 +22,36 @@ Then open `http://localhost:8000` (or the appropriate port).
 
 ## Architecture
 
-- **`index.html`** — Single entry point. Loads reveal.js + plugins from jsDelivr CDN. Contains all CSS styles inline, i18n logic (language detection via `?lang=` query parameter), layout adjustment JavaScript, and Google Analytics. Uses the `night` theme.
-- **`src/en/`** — English Markdown slide content.
-- **`src/zh/`** — Chinese Markdown slide content.
-- **`assets/`** — Images and videos referenced by slides.
+- **`index.html`** — Single entry point. Loads `slides.css` and `slides.js` from `slides.johnsonlee.io`, configures chapters via `Slides.init()`, and includes MathJax3 for LaTeX rendering plus Google Analytics.
+- **`src/en/`** and **`src/zh/`** — Parallel directories of Markdown slide content (English and Chinese). Every chapter file must exist in both directories.
+- **`assets/`** — Images (PNG, SVG, PSD) and videos (MP4) referenced by slides.
 - **`CNAME`** — GitHub Pages custom domain configuration.
+
+### Slides.init() Configuration
+
+The `Slides.init()` call in `index.html` declares the presentation structure:
+
+```js
+Slides.init({
+  title: 'Programming for Kids',
+  chapters: ['cover', 'preface', 'outline', 'chapter-1.0', ...],
+  langs: { en: 'EN', zh: '中文' }
+});
+```
+
+- **`chapters`** — Ordered list of Markdown filenames (without `.md`). Each maps to `src/{lang}/{name}.md`.
+- **`langs`** — Available languages. Keys are language codes used in the `?lang=` query parameter; values are display labels for the language toggle UI.
+
+### Adding a New Chapter
+
+1. Create `src/en/{name}.md` and `src/zh/{name}.md` with matching content structure.
+2. Add `'{name}'` to the `chapters` array in `index.html` at the desired position.
 
 ## i18n (Internationalization)
 
 - Language is controlled by the `?lang=` URL query parameter (defaults to `en`).
-- A language toggle button in the top-right corner switches between English and Chinese.
-- Each `<section data-src="filename.md">` in `index.html` gets rewritten to `src/{lang}/filename.md` at page load.
+- A language toggle button switches between configured languages.
+- The Slides framework rewrites chapter paths to `src/{lang}/{name}.md` at page load.
 
 ## Slide Content Conventions
 
