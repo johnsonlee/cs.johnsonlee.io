@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 350 295">
+  <!-- Row 1: Enqueue Alice (yc=30) -->
+  <text x="5" y="35" fill="#5dbe8a" font-size="13" font-family="sans-serif" font-weight="bold">Enqueue Alice</text>
+  <line x1="160" y1="14" x2="324" y2="14" stroke="#666" stroke-width="2"/>
+  <line x1="160" y1="46" x2="324" y2="46" stroke="#666" stroke-width="2"/>
+  <rect x="164" y="16" width="50" height="28" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="189" y="35" text-anchor="middle" fill="#fff" font-size="12" font-family="sans-serif" font-weight="bold">Alice</text>
+
+  <line x1="242" y1="50" x2="242" y2="68" stroke="#666" stroke-width="1.5"/>
+  <polygon points="238,68 242,76 246,68" fill="#666"/>
+
+  <!-- Row 2: Enqueue Bob (yc=90) -->
+  <text x="5" y="95" fill="#5dbe8a" font-size="13" font-family="sans-serif" font-weight="bold">Enqueue Bob</text>
+  <line x1="160" y1="74" x2="324" y2="74" stroke="#666" stroke-width="2"/>
+  <line x1="160" y1="106" x2="324" y2="106" stroke="#666" stroke-width="2"/>
+  <rect x="164" y="76" width="50" height="28" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="189" y="95" text-anchor="middle" fill="#fff" font-size="12" font-family="sans-serif" font-weight="bold">Alice</text>
+  <rect x="218" y="76" width="50" height="28" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="243" y="95" text-anchor="middle" fill="#fff" font-size="12" font-family="sans-serif" font-weight="bold">Bob</text>
+
+  <line x1="242" y1="110" x2="242" y2="128" stroke="#666" stroke-width="1.5"/>
+  <polygon points="238,128 242,136 246,128" fill="#666"/>
+
+  <!-- Row 3: Enqueue Charlie (yc=150) -->
+  <text x="5" y="155" fill="#5dbe8a" font-size="13" font-family="sans-serif" font-weight="bold">Enqueue Charlie</text>
+  <line x1="160" y1="134" x2="324" y2="134" stroke="#666" stroke-width="2"/>
+  <line x1="160" y1="166" x2="324" y2="166" stroke="#666" stroke-width="2"/>
+  <rect x="164" y="136" width="50" height="28" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="189" y="155" text-anchor="middle" fill="#fff" font-size="12" font-family="sans-serif" font-weight="bold">Alice</text>
+  <rect x="218" y="136" width="50" height="28" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="243" y="155" text-anchor="middle" fill="#fff" font-size="12" font-family="sans-serif" font-weight="bold">Bob</text>
+  <rect x="272" y="136" width="50" height="28" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="297" y="155" text-anchor="middle" fill="#fff" font-size="12" font-family="sans-serif" font-weight="bold">Charlie</text>
+
+  <line x1="242" y1="170" x2="242" y2="188" stroke="#666" stroke-width="1.5"/>
+  <polygon points="238,188 242,196 246,188" fill="#666"/>
+
+  <!-- Row 4: Dequeue Alice (yc=210) -->
+  <text x="5" y="215" fill="#4a9eff" font-size="13" font-family="sans-serif" font-weight="bold">Dequeue</text>
+  <rect x="38" y="196" width="50" height="28" rx="4" fill="none" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="63" y="215" text-anchor="middle" fill="#4a9eff" font-size="12" font-family="sans-serif" font-weight="bold">Alice</text>
+  <polygon points="95,206 95,214 89,210" fill="#4a9eff"/>
+  <line x1="95" y1="210" x2="158" y2="210" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="160" y1="194" x2="324" y2="194" stroke="#666" stroke-width="2"/>
+  <line x1="160" y1="226" x2="324" y2="226" stroke="#666" stroke-width="2"/>
+  <rect x="164" y="196" width="50" height="28" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="189" y="215" text-anchor="middle" fill="#fff" font-size="12" font-family="sans-serif" font-weight="bold">Bob</text>
+  <rect x="218" y="196" width="50" height="28" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="243" y="215" text-anchor="middle" fill="#fff" font-size="12" font-family="sans-serif" font-weight="bold">Charlie</text>
+
+  <line x1="242" y1="230" x2="242" y2="248" stroke="#666" stroke-width="1.5"/>
+  <polygon points="238,248 242,256 246,248" fill="#666"/>
+
+  <!-- Row 5: Dequeue Bob (yc=270) -->
+  <text x="5" y="275" fill="#4a9eff" font-size="13" font-family="sans-serif" font-weight="bold">Dequeue</text>
+  <rect x="38" y="256" width="50" height="28" rx="4" fill="none" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="63" y="275" text-anchor="middle" fill="#4a9eff" font-size="12" font-family="sans-serif" font-weight="bold">Bob</text>
+  <polygon points="95,266 95,274 89,270" fill="#4a9eff"/>
+  <line x1="95" y1="270" x2="158" y2="270" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <line x1="160" y1="254" x2="324" y2="254" stroke="#666" stroke-width="2"/>
+  <line x1="160" y1="286" x2="324" y2="286" stroke="#666" stroke-width="2"/>
+  <rect x="164" y="256" width="50" height="28" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="189" y="275" text-anchor="middle" fill="#fff" font-size="12" font-family="sans-serif" font-weight="bold">Charlie</text>
+</svg>

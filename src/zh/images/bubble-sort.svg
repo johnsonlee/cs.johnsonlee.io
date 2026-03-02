@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 400">
+  <defs>
+    <linearGradient id="water" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a9eff" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#1a3c5e" stop-opacity="0.5"/>
+    </linearGradient>
+    <radialGradient id="shine" cx="0.35" cy="0.3" r="0.65">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#4a9eff" stop-opacity="0.05"/>
+    </radialGradient>
+    <marker id="arrow" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#5dbe8a"/>
+    </marker>
+  </defs>
+
+  <!-- Container -->
+  <path d="M120,35 L100,360 Q100,380 120,380 L360,380 Q380,380 380,360 L360,35"
+        fill="url(#water)" stroke="#4a9eff" stroke-width="2" stroke-linejoin="round"/>
+
+  <!-- Water surface -->
+  <path d="M120,35 Q170,25 220,35 Q270,45 320,35 Q345,28 360,35"
+        fill="none" stroke="#4a9eff" stroke-width="2" opacity="0.6"/>
+
+  <!-- Tiny decorative bubbles -->
+  <circle cx="145" cy="340" r="4" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.3"/>
+  <circle cx="340" cy="300" r="3" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.25"/>
+  <circle cx="160" cy="250" r="3.5" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.2"/>
+  <circle cx="330" cy="200" r="2.5" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.2"/>
+  <circle cx="155" cy="140" r="3" fill="none" stroke="#4a9eff" stroke-width="1" opacity="0.15"/>
+
+  <!-- Bubble 8 (biggest, near top) -->
+  <circle cx="240" cy="85" r="40" fill="url(#shine)" stroke="#4a9eff" stroke-width="2"/>
+  <text x="240" y="97" text-anchor="middle" fill="#fff" font-size="32" font-family="sans-serif" font-weight="bold">8</text>
+  <!-- Rising arrow -->
+  <line x1="240" y1="37" x2="240" y2="16" stroke="#5dbe8a" stroke-width="2.5" marker-end="url(#arrow)"/>
+
+  <!-- Bubble 5 (medium-large) -->
+  <circle cx="175" cy="180" r="32" fill="url(#shine)" stroke="#4a9eff" stroke-width="1.8"/>
+  <text x="175" y="191" text-anchor="middle" fill="#fff" font-size="26" font-family="sans-serif" font-weight="bold">5</text>
+  <line x1="175" y1="140" x2="175" y2="125" stroke="#5dbe8a" stroke-width="2" opacity="0.6" marker-end="url(#arrow)"/>
+
+  <!-- Bubble 3 (medium) -->
+  <circle cx="300" cy="250" r="26" fill="url(#shine)" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="300" y="260" text-anchor="middle" fill="#fff" font-size="22" font-family="sans-serif" font-weight="bold">3</text>
+
+  <!-- Bubble 2 (small) -->
+  <circle cx="200" cy="315" r="22" fill="url(#shine)" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="200" y="324" text-anchor="middle" fill="#fff" font-size="18" font-family="sans-serif" font-weight="bold">2</text>
+
+  <!-- Bubble 1 (smallest, near bottom) -->
+  <circle cx="310" cy="350" r="18" fill="url(#shine)" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="310" y="358" text-anchor="middle" fill="#fff" font-size="15" font-family="sans-serif" font-weight="bold">1</text>
+
+  <!-- Label -->
+  <text x="240" y="15" text-anchor="middle" fill="#ddd" font-size="13" font-family="sans-serif">越大的气泡，浮得越快</text>
+</svg>

@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 580 220">
+  <defs>
+    <marker id="arr" markerUnits="userSpaceOnUse" markerWidth="10" markerHeight="8" refX="6" refY="4" orient="auto">
+      <path d="M0,0 L10,4 L0,8 Z" fill="#666"/>
+    </marker>
+  </defs>
+
+  <!-- State 1: Push 42 (cx=74) -->
+  <text x="74" y="22" text-anchor="middle" fill="#5dbe8a" font-size="14" font-family="sans-serif" font-weight="bold">Push 42</text>
+  <path d="M40,95 L40,205 L108,205 L108,95" fill="none" stroke="#666" stroke-width="2"/>
+  <rect x="44" y="173" width="60" height="30" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="74" y="193" text-anchor="middle" fill="#fff" font-size="18" font-family="sans-serif" font-weight="bold">42</text>
+
+  <line x1="112" y1="165" x2="138" y2="165" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- State 2: Push 17 (cx=182) -->
+  <text x="182" y="22" text-anchor="middle" fill="#5dbe8a" font-size="14" font-family="sans-serif" font-weight="bold">Push 17</text>
+  <path d="M148,95 L148,205 L216,205 L216,95" fill="none" stroke="#666" stroke-width="2"/>
+  <rect x="152" y="173" width="60" height="30" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="182" y="193" text-anchor="middle" fill="#fff" font-size="18" font-family="sans-serif" font-weight="bold">42</text>
+  <rect x="152" y="141" width="60" height="30" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="182" y="161" text-anchor="middle" fill="#fff" font-size="18" font-family="sans-serif" font-weight="bold">17</text>
+
+  <line x1="220" y1="165" x2="246" y2="165" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- State 3: Push 8 (cx=290) -->
+  <text x="290" y="22" text-anchor="middle" fill="#5dbe8a" font-size="14" font-family="sans-serif" font-weight="bold">Push 8</text>
+  <path d="M256,95 L256,205 L324,205 L324,95" fill="none" stroke="#666" stroke-width="2"/>
+  <rect x="260" y="173" width="60" height="30" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="290" y="193" text-anchor="middle" fill="#fff" font-size="18" font-family="sans-serif" font-weight="bold">42</text>
+  <rect x="260" y="141" width="60" height="30" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="290" y="161" text-anchor="middle" fill="#fff" font-size="18" font-family="sans-serif" font-weight="bold">17</text>
+  <rect x="260" y="109" width="60" height="30" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="290" y="129" text-anchor="middle" fill="#fff" font-size="18" font-family="sans-serif" font-weight="bold">8</text>
+
+  <line x1="328" y1="165" x2="354" y2="165" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- State 4: Pop 8 (cx=398) -->
+  <text x="398" y="22" text-anchor="middle" fill="#4a9eff" font-size="14" font-family="sans-serif" font-weight="bold">Pop</text>
+  <rect x="368" y="40" width="60" height="30" rx="4" fill="none" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="398" y="60" text-anchor="middle" fill="#4a9eff" font-size="18" font-family="sans-serif" font-weight="bold">8</text>
+  <polygon points="393,77 398,71 403,77" fill="#4a9eff"/>
+  <line x1="398" y1="77" x2="398" y2="95" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M364,95 L364,205 L432,205 L432,95" fill="none" stroke="#666" stroke-width="2"/>
+  <rect x="368" y="173" width="60" height="30" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="398" y="193" text-anchor="middle" fill="#fff" font-size="18" font-family="sans-serif" font-weight="bold">42</text>
+  <rect x="368" y="141" width="60" height="30" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="398" y="161" text-anchor="middle" fill="#fff" font-size="18" font-family="sans-serif" font-weight="bold">17</text>
+
+  <line x1="436" y1="165" x2="462" y2="165" stroke="#666" stroke-width="1.5" marker-end="url(#arr)"/>
+
+  <!-- State 5: Pop 17 (cx=506) -->
+  <text x="506" y="22" text-anchor="middle" fill="#4a9eff" font-size="14" font-family="sans-serif" font-weight="bold">Pop</text>
+  <rect x="476" y="40" width="60" height="30" rx="4" fill="none" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <text x="506" y="60" text-anchor="middle" fill="#4a9eff" font-size="18" font-family="sans-serif" font-weight="bold">17</text>
+  <polygon points="501,77 506,71 511,77" fill="#4a9eff"/>
+  <line x1="506" y1="77" x2="506" y2="95" stroke="#4a9eff" stroke-width="1.5" stroke-dasharray="4,3"/>
+  <path d="M472,95 L472,205 L540,205 L540,95" fill="none" stroke="#666" stroke-width="2"/>
+  <rect x="476" y="173" width="60" height="30" rx="4" fill="#1a3c5e" stroke="#4a9eff" stroke-width="1.5"/>
+  <text x="506" y="193" text-anchor="middle" fill="#fff" font-size="18" font-family="sans-serif" font-weight="bold">42</text>
+</svg>

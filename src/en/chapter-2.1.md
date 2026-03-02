@@ -87,14 +87,11 @@ Computers need instructions that are:
 
 ## Many Programming Languages
 
-The [TIOBE Index](https://www.tiobe.com/tiobe-index/) ranks the most popular ones:
+Just like people speak many human languages, there are many programming languages too:
 
-| Rank | Language | Share |
-|:----:|:---------|:-----:|
-| 1 | Python | 21.81% |
-| 2 | C | 11.05% |
-| 3 | C++ | 8.55% |
-| 4 | Java | 8.12% |
+* **Python** — the most popular, very concise to write <!-- .element: class="fragment" -->
+* **C / C++** — the fastest, used to build many video games <!-- .element: class="fragment" -->
+* **Java** — used by tens of millions of programmers worldwide <!-- .element: class="fragment" -->
 
 > So many choices! Which one should we learn first?
 
@@ -102,10 +99,10 @@ The [TIOBE Index](https://www.tiobe.com/tiobe-index/) ranks the most popular one
 
 ## Why Not Python?
 
-Python is #1 in popularity — but it has tricky features for beginners:
+Python is the most popular — but it has tricky parts for beginners:
 
-* **Invisible rules** — indentation (spaces) changes the meaning of code; one wrong space breaks everything <!-- .element: class="fragment" -->
-* **No type labels** — you never declare what type a variable is, making it hard to understand what's inside <!-- .element: class="fragment" -->
+* **Invisible traps** — one extra space or one missing space breaks your program, and it's hard to see what went wrong <!-- .element: class="fragment" -->
+* **No labels on boxes** — you don't have to say what type of thing goes in a box, but that makes it easy to mix things up <!-- .element: class="fragment" -->
 
 > Popular doesn't always mean best for learning. <!-- .element: class="fragment" -->
 
@@ -113,12 +110,12 @@ Python is #1 in popularity — but it has tricky features for beginners:
 
 ## Why Not C / C++?
 
-C and C++ are fast and powerful — but they can be overwhelming:
+C and C++ are fast and powerful — but they're tough for beginners:
 
-* **Manual memory management** — you must allocate and free memory yourself; one mistake crashes the program <!-- .element: class="fragment" -->
-* **Complex toolchain** — compilers, linkers, header files... too many things to set up before writing your first line <!-- .element: class="fragment" -->
+* **You clean up your own mess** — when your program is done using something, you must clean it up yourself; forget once and the program crashes <!-- .element: class="fragment" -->
+* **Too much setup** — you need to install many tools before you can even write your first line of code <!-- .element: class="fragment" -->
 
-> Power comes at a cost — too much complexity for our first language. <!-- .element: class="fragment" -->
+> Too much power can be a burden — too complex for a first language. <!-- .element: class="fragment" -->
 
 ----
 
@@ -126,9 +123,9 @@ C and C++ are fast and powerful — but they can be overwhelming:
 
 Java hits the sweet spot for learning:
 
-* **Explicit types** — every variable has a clear type label, so you always know what's inside <!-- .element: class="fragment" -->
-* **No manual memory management** — Java cleans up for you, so you focus on logic <!-- .element: class="fragment" -->
-* **Simple toolchain** — just `javac` and `java`, two commands to write and run code <!-- .element: class="fragment" -->
+* **Labels on every box** — every box is clearly labeled with what goes inside, so nothing gets mixed up <!-- .element: class="fragment" -->
+* **Auto-cleanup** — Java tidies up for you, so you focus on your program <!-- .element: class="fragment" -->
+* **Easy setup** — install it and start coding right away <!-- .element: class="fragment" -->
 * **Top 4 worldwide** — used by tens of millions of programmers <!-- .element: class="fragment" -->
 
 > Java teaches us to think precisely — exactly what we need!

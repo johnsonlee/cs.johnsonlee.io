@@ -37,9 +37,6 @@ After 9, we run out of symbols, then:
 * Go back to 0 <!-- .element: class="fragment" data-fragment-index="1" -->
 * Carry 1 to the next position <!-- .element: class="fragment" data-fragment-index="2" -->
 
-<br/>
-<br/>
-
 **This rule is not about math, it's about representation.** <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ----
@@ -50,6 +47,7 @@ Decimal means:
 
 * **10** symbols
 * Each position is worth a power of **10**
+
 The values comes from the **position**.
 
 > `345 = 300 + 40 + 5`
@@ -98,6 +96,7 @@ Computers use binary digits:
 Just like **decimal**:
 * There are only 2 symbols
 * Each position has a weight (a power of 2)
+
 The value also comes from the **position**:
 
 `1010 = 1 × 2³ + 0 × 2² + 1 × 2¹ + 0 × 2⁰`
@@ -109,9 +108,11 @@ The value also comes from the **position**:
 Just like **decimal** and **binary**:
 * Hexadecimal has 16 symbols: 0 1 2 3 4 5 6 7 8 9 A B C D E F
 * Each position has a weight (a power of 16)
+
 The value also comes from the **position**:
 
 `12A = 1 × 16² + 2 × 16¹ + 10 × 16⁰`
+
 So, binary and hexadecimal follow the same idea as decimal.
 
 ----
@@ -127,6 +128,7 @@ We write numbers using symbols:
 * 42
 * 101010
 * 2A
+
 They look different, but can represent the same value.
 
 > What makes them different?
@@ -188,6 +190,7 @@ $$
 We know that numbers are represented in binary digits.
 
 Inside a computer, binary digits are represented as **bits**.
+
 `Digits :   1    0    1    0`
 
 `           ↓    ↓    ↓    ↓`
@@ -226,6 +229,7 @@ In real program, we store many numbers in memory.
 Numbers can be:
 * small: `123`
 * large: `23456789`
+
 Why no use:
 * fewer bits for small numbers
 * more bits for large numbers?
@@ -252,6 +256,7 @@ How do we find the next numbers?
 ## Fixed-size Numbers
 
 With fixed-size numbers, the position of each number is predictable.
+
 Fixed size solves:
 
 > Where is the next number?
@@ -265,14 +270,15 @@ But we still need to choose:
 ## Bit-width
 
 The number of bits used for one number is called its **bit-width**.
+
 Common choices:
 
 ```text
-  bit-width | bits
+  bit-width | bits                                                            
 ------------+-----------------------------------------------------------------
-    8-bit   | ▢▢▢▢▢▢▢▢
-   16-bit   | ▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
-   32-bit   | ▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+    8-bit   | ▢▢▢▢▢▢▢▢                                                        
+   16-bit   | ▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢                                                
+   32-bit   | ▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢                                
    64-bit   | ▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
 ```
 
@@ -285,6 +291,7 @@ Common choices:
 More bits means:
 * larger range
 * more memory
+
 Fewer bits means:
 * smaller range
 * less memory
@@ -342,16 +349,16 @@ Then we must use some bits to represent **sign**.
 ## Signed Numbers Representation
 
 ```text
- bit-width | bits
+ bit-width | bits                                                             
 -----------+------------------------------------------------------------------
-    8-bit  | ◌▢▢▢▢▢▢▢
-   16-bit  | ◌▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
-   32-bit  | ◌▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
+    8-bit  | ◌▢▢▢▢▢▢▢                                                         
+   16-bit  | ◌▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢                                                
+   32-bit  | ◌▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢                                
    64-bit  | ◌▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢▢
 
 
-  ◌ → sign
-  ▢ → magnitude
+  ◌ → sign                                                                    
+  ▢ → magnitude                                                               
 ```
 
 ----
@@ -361,6 +368,7 @@ Then we must use some bits to represent **sign**.
 Using a sign means:
 * fewer bits for magnitude
 * smaller range of values
+
 What about ...
 * age
 * number of students
@@ -401,6 +409,7 @@ What about numbers like:
 * 3.1415926
 * 0.1
 * -2.5
+
 Can we just store like this?
 
 $$
@@ -436,6 +445,7 @@ We want a way to represent:
 In math, we can write:
 * `314.15926 = 3.1415926 × 10^2`
 * `0.0000121 = 1.21 × 10^−5`
+
 This is **Scientific Notation**.
 
 $$
